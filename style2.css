@@ -1,0 +1,220 @@
+/* RESET & BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #4a0000;
+    color: white;
+    overflow-x: hidden;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #330000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #f9c34d;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    position: relative;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #f9c34d;
+    bottom: -4px;
+    left: 0;
+    transition: width 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #f9c34d;
+  }
+  
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+  
+  /* HAMBURGER MENU */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 24px;
+    height: 18px;
+    justify-content: space-between;
+  }
+  
+  .menu-toggle span {
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: 0.3s ease;
+  }
+  
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+
+.locations {
+    padding: 3rem 2rem;
+    background-color: #4a0000;
+    color: white;
+    text-align: center;
+  }
+  
+  .locations h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #f9c34d;
+  }
+  
+  .locations p {
+    margin-bottom: 2rem;
+  }
+  
+  .location-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .location-item {
+    background: #330000;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .map-container {
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  
+  /* Tambahan khusus untuk halaman lokasi */
+.locations {
+    padding: 3rem 2rem;
+    background-color: #4a0000;
+    color: white;
+    text-align: center;
+  }
+  
+  .locations h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #f9c34d;
+  }
+  
+  .locations p {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+  }
+  
+  .location-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .location-item {
+    background: #330000;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+  }
+  
+  .location-item:hover {
+    transform: scale(1.02);
+  }
+  
+  .map-container {
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  
+  /* Responsive tweaks */
+  @media screen and (max-width: 768px) {
+    .locations {
+      padding: 2rem 1rem;
+    }
+  
+    .locations h1 {
+      font-size: 1.5rem;
+    }
+  
+    .location-item {
+      padding: 1rem;
+    }
+  
+    .map-container iframe {
+      height: 250px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .location-item h3 {
+      font-size: 1rem;
+    }
+  
+    .location-item p {
+      font-size: 0.9rem;
+    }
+  
+    .locations h1 {
+      font-size: 1.3rem;
+    }
+  
+    .locations p {
+      font-size: 0.95rem;
+    }
+  }
+  
